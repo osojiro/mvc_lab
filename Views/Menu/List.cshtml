@@ -1,0 +1,15 @@
+﻿    <h2>Полное меню</h2>
+    <h3>@Model.MenuCategory</h3>
+<div class="row mt-5 mb-2">
+    @{ 
+        foreach(var Menu in Model.allMenu)
+        {
+            <div class="col-lg-4"> 
+                <img class="img-thumbnail" src="@Menu.img" alt="@Menu.name" />
+                <h2>@Menu.name  </h2>  
+                <p>@Menu.shortDesc</p>
+                 <p>Цена: @Menu.price.ToString("c") </p>
+            </div> 
+        }
+    }
+</div>
